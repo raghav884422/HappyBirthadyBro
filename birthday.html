@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday — Sudhanshu Mishra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{
+      background: radial-gradient(circle at top left, #00bcd4, #00695c);
+      color:#fff;
+      overflow-x:hidden;
+    }
+    header{
+      text-align:center;
+      padding:60px 20px 40px;
+      background:linear-gradient(135deg,#004d40,#00796b,#26a69a);
+      position:relative;
+      overflow:hidden;
+    }
+    header::after{
+      content:'';
+      position:absolute;
+      width:200%;height:200%;top:-50%;left:-50%;
+      background:radial-gradient(circle,#80deea33 10%,transparent 10.01%);
+      background-size:60px 60px;
+      animation:movebg 30s linear infinite;
+      z-index:0;
+    }
+    @keyframes movebg{from{transform:translate(0,0);}to{transform:translate(60px,60px);}}
+    header h1{
+      font-size:48px;
+      z-index:2;position:relative;
+      text-shadow:0 0 10px rgba(255,255,255,0.8);
+    }
+    header h2{
+      font-size:22px;
+      font-weight:400;
+      margin-top:10px;
+      color:#e0f7fa;
+      z-index:2;position:relative;
+    }
+    .hero{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      padding:60px 20px;
+      background:linear-gradient(145deg,#004d40,#00251a);
+      gap:40px;
+    }
+    
+    .photo{
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  background:url('/vashuBirthday/WhatsApp\ Image\ 2025-11-14\ at\ 03.56.36_60a49d38.jpg') center/cover no-repeat;
+  box-shadow:0 0 30px rgba(0,0,0,0.6),0 0 40px rgba(0,188,212,0.8);
+  position:relative;
+}
+
+    
+    .photo::after{
+      content:'25';position:absolute;bottom:-20px;right:-20px;
+      background:#00bfa5;color:#fff;font-size:40px;font-weight:700;
+      border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;
+      box-shadow:0 0 15px rgba(0,0,0,0.4);
+    }
+    .msg{
+      max-width:600px;
+      background:rgba(255,255,255,0.1);
+      padding:30px;border-radius:16px;
+      box-shadow:0 0 25px rgba(255,255,255,0.2);
+    }
+    .msg h3{font-size:30px;margin-bottom:10px;color:#00e676;}
+    .msg p{font-size:18px;line-height:1.6;}
+
+    .gallery{
+      background:linear-gradient(135deg,#004d40,#00796b,#004d40);
+      padding:60px 20px;text-align:center;
+    }
+    .gallery h2{font-size:36px;margin-bottom:20px;}
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
+    }
+    .gallery-grid img{
+      width:100%;height:200px;object-fit:cover;border-radius:12px;
+      transition:transform 0.4s,box-shadow 0.4s;
+    }
+    .gallery-grid img:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 25px rgba(0,188,212,0.6);
+    }
+
+    .footer{
+      background:#00251a;text-align:center;padding:40px;color:#80cbc4;font-size:15px;
+    }
+    .confetti{
+      position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:100;
+    }
+  </style>
+</head>
+<body>
+  <canvas class="confetti"></canvas>
+  <header>
+    <h1>🎉 Happy Birthday Sudhanshu Mishra 🎉</h1>
+    <h2>Born on 14 November 2000</h2>
+  </header>
+
+  <section class="hero">
+    <div class="photo"></div>
+    <div class="msg">
+      <h3>Dear Sudhanshu,</h3>
+      <p>Wishing a very Happy 25th Birthday to an amazing person who brightens every room with his energy and positivity! May your life be filled with success, laughter, and endless joy. Keep shining, keep smiling, and let this year bring even greater achievements! 🎂🎁</p>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2>Memories &amp; Moments</h2>
+    <div class="gallery-grid">
+      <img src="/vashuBirthday/images/WhatsApp Image 2025-09-13 at 22.37.06_7b49c023.jpg" alt="">
+      <img src="/vashuBirthday/WhatsApp Image 2025-11-14 at 03.43.38_5042860d.jpg" alt="">
+      <img src="/vashuBirthday/images/WhatsApp Image 2025-11-14 at 03.41.26_3fcb68c2.jpg" alt="">
+      <img src="/vashuBirthday/images/WhatsApp Image 2025-11-14 at 03.42.09_7ceed8a0.jpg" alt="">
+      <img src="/vashuBirthday/images/WhatsApp Image 2025-11-14 at 03.43.25_f6bbeb81.jpg" alt="">
+      <img src="/vashuBirthday/images/WhatsApp Image 2025-11-14 at 03.56.36_60a49d38.jpg" alt="">
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>Created with ❤️ to celebrate the amazing journey of <strong>Sudhanshu Mishra</strong>.</p>
+  </div>
+
+  <script>
+    // Confetti Animation
+    const canvas = document.querySelector('.confetti');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const confetti = Array.from({length:200}).map(()=>({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*6+2,d:Math.random()*2+2,color:`hsl(${Math.random()*360},100%,60%)`}));
+    function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);confetti.forEach(c=>{ctx.beginPath();ctx.arc(c.x,c.y,c.r,0,2*Math.PI);ctx.fillStyle=c.color;ctx.fill();});}
+    function update(){confetti.forEach(c=>{c.y+=c.d;c.x+=Math.sin(c.y*0.01);if(c.y>canvas.height){c.y=-10;c.x=Math.random()*canvas.width;}});}
+    function loop(){draw();update();requestAnimationFrame(loop);}loop();
+  </script>
+</body>
+</html>
